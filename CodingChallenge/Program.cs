@@ -41,12 +41,13 @@ for (int i = 0; i < lines.Length; i++)
 
 //Basic solution completed within time margin
 BasicSolution();
-//Recursive solution. Uncomment to test.
-//RecursiveSolution();
+//Recursive solution.
+RecursiveSolution();
 
 //Basic solution functions for different word lengths
 void BasicSolution()
 {
+    Console.WriteLine("Basic solution result:");
     for (int i = 0; i < parts.Count; i++)
     {
         for (int j = i + 1; j < parts.Count; j++)
@@ -68,6 +69,8 @@ void BasicSolution()
 //Recursive solution functions for different maximum combinations and different word lengths
 void RecursiveSolution()
 {
+    Console.WriteLine();
+    Console.WriteLine("Recursive solution result:");
     for (int i = 0; i < words.Count; i++)
     {
         FindPartsCombinationForWord(words[i], words[i], new List<string>(), MAXCOMBINATION);
